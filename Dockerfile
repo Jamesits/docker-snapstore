@@ -6,8 +6,8 @@ RUN apt-get update \
 	&& apt-get install -y git python-virtualenv\
 	&& rm -rf /var/lib/apt/lists/*
 
-RUN cd /var/www \
-    && git clone https://github.com/noise/snapstore.git \
+WORKDIR /var/www
+RUN git clone https://github.com/noise/snapstore.git \
     && cd snapstore \
     && virtualenv env \
     && . env/bin/activate \
