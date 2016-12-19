@@ -3,7 +3,7 @@ MAINTAINER James Swineson <docker@public.swineson.me>
 
 RUN apt-get update \
 	&& apt-get upgrade -y \
-	&& apt-get install -y python-virtualenv\
+	&& apt-get install -y git python-virtualenv\
 	&& rm -rf /var/lib/apt/lists/*
 
 WORKDIR /var/www
